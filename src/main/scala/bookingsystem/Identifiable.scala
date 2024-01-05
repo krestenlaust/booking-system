@@ -7,6 +7,5 @@ package bookingsystem
  * @author The Teacher
  * @version 1.1, 2023-10-20
  */
-trait Identifiable[A] {
+trait Identifiable[A]:
   def identifier : A
-}
