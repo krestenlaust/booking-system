@@ -1,6 +1,6 @@
 package bookingsystem
 
-import com.github.nscala_time.time.StaticLocalDateTime
+import com.github.nscala_time.time.Imports.*
 
 /**
  * An interface TimeSlot that represents time slots that can be booked
@@ -12,8 +12,8 @@ trait TimeSlot {
   def overlaps(other: TimeSlot): Boolean
   def covers(other: TimeSlot): Boolean
 
-  def startDate: StaticLocalDateTime
-  def endDate: StaticLocalDateTime
-  
+  def startDate: LocalDateTime
+  def endDate: LocalDateTime
+
   def available: Boolean
 }

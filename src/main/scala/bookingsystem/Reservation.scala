@@ -1,14 +1,14 @@
 package bookingsystem
-import com.github.nscala_time.time.StaticLocalDateTime
+import com.github.nscala_time.time.Imports.*
 
-class Reservation extends TimeSlot:
+class Reservation(val startTime: LocalDateTime, val duration: Duration) extends TimeSlot:
   override def overlaps(other: TimeSlot): Boolean = ???
 
   override def covers(other: TimeSlot): Boolean = ???
 
-  override def startDate: StaticLocalDateTime = ???
+  override def startDate: LocalDateTime = startTime + duration
 
-  override def endDate: StaticLocalDateTime = ???
+  override def endDate: LocalDateTime = startTime + duration
 
   override def available: Boolean = ???
 

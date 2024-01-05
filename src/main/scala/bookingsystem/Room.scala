@@ -1,6 +1,7 @@
 package bookingsystem
 
 import com.github.nscala_time.time.StaticLocalDate
+import com.github.nscala_time.time.Imports._
 
 abstract class Room[A] extends Identifiable[A]:
   /**
@@ -26,4 +27,4 @@ abstract class Room[A] extends Identifiable[A]:
    * @param date
    * @return
    */
-  def toString(date: StaticLocalDate): String = ???
+  def toString(date: LocalDate): String = ???

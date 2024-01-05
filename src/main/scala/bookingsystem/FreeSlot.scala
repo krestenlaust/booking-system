@@ -1,5 +1,5 @@
 package bookingsystem
-import com.github.nscala_time.time.StaticLocalDateTime
+import com.github.nscala_time.time.Imports._
 
 /**
  * Represents an available time slot
@@ -11,9 +11,9 @@ class FreeSlot extends TimeSlot:
 
   override def covers(other: TimeSlot): Boolean = ???
 
-  override def startDate: StaticLocalDateTime = ???
+  override def startDate: LocalDateTime = ???
 
-  override def endDate: StaticLocalDateTime = ???
+  override def endDate: LocalDateTime = ???
 
   override def available: Boolean = ???
 
