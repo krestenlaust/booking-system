@@ -1,7 +1,12 @@
 package bookingsystem
 import com.github.nscala_time.time.StaticLocalDateTime
 
-class Reservation extends TimeSlot:
+/**
+ * Represents an available time slot
+ * from a start time to an end time.
+ */
+class FreeSlot extends TimeSlot:
+
   override def overlaps(other: TimeSlot): Boolean = ???
 
   override def covers(other: TimeSlot): Boolean = ???
@@ -12,12 +17,4 @@ class Reservation extends TimeSlot:
 
   override def available: Boolean = ???
 
-  /**
-   * Updates the time used by the group
-   * when the reservation is approved.
-   * @return
-   */
-  def approve = ??? // No idea
-
   override def toString: String = ???
-
