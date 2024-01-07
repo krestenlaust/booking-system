@@ -8,7 +8,7 @@ import com.github.nscala_time.time.StaticDuration
  *
  * @param id
  */
-class Group(val id: Int) extends Ordered[Group]:
+class Group(val id: Int) extends Ordered[Group], Identifiable[Int]:
 
   /**
    * Extends the reserved time by a specified duration.
@@ -27,4 +27,6 @@ class Group(val id: Int) extends Ordered[Group]:
 
   override def compare(that: Group): Int =
     ???
+
+  override def identifier: Int = id
 
