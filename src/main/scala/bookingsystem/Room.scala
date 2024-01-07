@@ -1,9 +1,13 @@
 package bookingsystem
 
-import com.github.nscala_time.time.StaticLocalDate
+import scala.collection.mutable.ListBuffer
 import com.github.nscala_time.time.Imports._
 
-abstract class Room[A] extends Identifiable[A]:
+class Room(id: String) extends Identifiable[String]:
+  private val calendar = ListBuffer.empty[TimeSlot]
+
+  override def identifier: String = id
+
   /**
    * Returns true if the room is available at the time period represented by t.
    * @param t
@@ -16,8 +20,8 @@ abstract class Room[A] extends Identifiable[A]:
    * Adds the reservation r to the room's calendar.
    * @param r
    */
-  def book(r: Reservation): Unit =
-    ???
+  def book(r: Reservation): Unit = ???
+    //calendar.addOne()
 
   override def toString: String = ???
 
