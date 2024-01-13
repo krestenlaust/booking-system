@@ -1,7 +1,7 @@
 package bookingsystem
 import com.github.nscala_time.time.Imports.*
 
-class Reservation(val group: Group, startTime: LocalDateTime, duration: Duration) extends StartEndTimeSlot(startTime, duration):
+class Reservation(val group: Group, startTime: LocalDateTime, duration: Duration) extends TimeSlot(startTime, duration):
   override def available: Boolean =
     ???
 

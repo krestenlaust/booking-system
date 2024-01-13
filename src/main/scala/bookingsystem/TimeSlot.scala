@@ -8,11 +8,17 @@ import com.github.nscala_time.time.Imports.*
  * @author The Teacher
  * @version 1.1, 2023-12-04
  */
-trait TimeSlot:
-  def overlaps(other: TimeSlot): Boolean
-  def covers(other: TimeSlot): Boolean
+trait TimeSlot(startTime: LocalDateTime, val duration: Duration):
+  def overlaps(other: TimeSlot): Boolean =
+    ???
 
-  def startDate: LocalDateTime
-  def endDate: LocalDateTime
+  def covers(other: TimeSlot): Boolean =
+    ???
+
+  def startDate: LocalDateTime =
+    startTime
+
+  def endDate: LocalDateTime =
+    startTime + duration
 
   def available: Boolean
