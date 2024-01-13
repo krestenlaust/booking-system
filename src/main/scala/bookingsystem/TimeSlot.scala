@@ -10,7 +10,7 @@ import com.github.nscala_time.time.Imports.*
  */
 trait TimeSlot(startTime: LocalDateTime, val duration: Duration):
   def overlaps(other: TimeSlot): Boolean =
-    ???
+    other.endDate.isAfter(startDate) && endDate.isAfter(other.startDate)
 
   def covers(other: TimeSlot): Boolean =
     ???
